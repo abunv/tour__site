@@ -6,6 +6,9 @@
 
 body {
     font-family: 'poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 @blue: #157AFE;
@@ -178,8 +181,8 @@ textarea,input {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 52px;
-            width: 52px;
+            height: 42px;
+            width: 42px;
             border-radius: 10px;
             background-color: #fff;
             margin-left: 20px;
@@ -189,15 +192,70 @@ textarea,input {
             }
         }
     }
+    .header__icon{
+        font-size: 20px;
+    }
 }
 
 .footer {
     background-color: @dblue;
     padding: 22px 0px;
     color: #fff;
+    font-size: 14px;
+    margin-top: auto;
     .container {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+.main {
+    flex: 1;
+    background: url(../img/shinkansen.jpg) no-repeat center center/cover;
+    padding-top: 30px;
+    padding-bottom: 130px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 26px;
+    text-align: center;
+    color: #fff;
+    span {
+        color: @blue;
+    }
+}
+
+.pbox {
+    height: 171px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center center;
+    padding: 15px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    &__link {
+        margin-left: auto;
+        color: #fff;
+        border: 8px solid #C1DCFF;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: @blue;
+        padding: 7.5px;
+        transition: 0.3s;
+        &:hover {
+            border-color: @blue;
+        }
+    }
+    &__title {
+        margin-top: auto;
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
     }
 }
