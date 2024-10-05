@@ -25,10 +25,22 @@ body {
   width: 25%;
   padding: 0px 10px;
 }
+.col-4 {
+  flex-basis: 33.33%;
+  min-width: 33.33%;
+  width: 33.33%;
+  padding: 0px 10px;
+}
 .col-6 {
   flex-basis: 50%;
   min-width: 50%;
   width: 50%;
+  padding: 0px 10px;
+}
+.col-9 {
+  flex-basis: 75%;
+  min-width: 75%;
+  width: 75%;
   padding: 0px 10px;
 }
 @media only screen and (max-width: 1020px) {
@@ -130,11 +142,43 @@ input:focus {
   outline: unset;
 }
 .header {
-  padding: 20px 30px;
+  padding: 15px;
   background: #157AFE;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+.header__toggle {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.header__toggle span {
+  height: 2px;
+  width: 20px;
+  background-color: #157AFE;
+  position: relative;
+}
+.header__toggle span:before,
+.header__toggle span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #157AFE;
+  top: -7px;
+  left: 0;
+}
+.header__toggle span:after {
+  top: 7px;
 }
 .header__menu {
   display: flex;
@@ -144,9 +188,16 @@ input:focus {
   border-radius: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 6px 11px;
   color: #fff;
   font-size: 16px;
+  margin-right: 5px;
+}
+.header__menu--link span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 5px;
 }
 .header__menu--link.active,
@@ -160,11 +211,11 @@ input:focus {
 }
 .header__menu--link span {
   filter: brightness(0) invert(1);
-  margin-right: 17px;
 }
 .header__btns {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .header__btns button {
   display: flex;
@@ -177,11 +228,14 @@ input:focus {
   margin-left: 20px;
   border: 2px solid #fff;
 }
+.header__btns button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
 .header__btns button:hover {
   background: unset;
-}
-.header .header__icon {
-  font-size: 20px;
 }
 .footer {
   background-color: #135CBB;
@@ -200,6 +254,64 @@ input:focus {
   background: url(../img/shinkansen.jpg) no-repeat center center / cover;
   padding-top: 30px;
   padding-bottom: 130px;
+}
+.main__support {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #B8B8B8;
+  border-bottom: 1px solid #B8B8B8;
+  padding: 20px ;
+  background-color: rgba(204, 204, 204, 0.339);
+}
+.main__support--link {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  font-weight: 700;
+  color: black;
+}
+.main__support--link span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 57px;
+  height: 57px;
+  background-color: #157AFE;
+  margin: 0px 20px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.main__support--link span:hover {
+  background-color: #fff;
+  color: #157AFE;
+}
+.main__support--link b {
+  flex: 1;
+}
+.main__about {
+  display: flex;
+  background-color: rgba(204, 204, 204, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 26px;
+}
+.main__about--text {
+  padding: 14px 22px;
+  flex: 1;
+}
+.main__about--img {
+  border-radius: 20px;
+  flex-basis: 400px;
+  min-width: 400px;
+  width: 400px;
+}
+.main__about--title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.main__about p {
+  font-size: 15px;
+  margin-bottom: 15px;
 }
 h1 {
   font-size: 24px;
@@ -220,6 +332,7 @@ h1 span {
   padding: 15px 15px 10px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .pbox__link {
   margin-left: auto;
@@ -231,14 +344,127 @@ h1 span {
   justify-content: center;
   background-color: #157AFE;
   padding: 7.5px;
-  transition: 0.3s;
+  transition: 0.5s;
+}
+.pbox__link .pbox__icon {
+  transition: 0.5s;
 }
 .pbox__link:hover {
   border-color: #157AFE;
+}
+.pbox__link:hover .pbox__icon {
+  transform: rotate(320deg);
 }
 .pbox__title {
   margin-top: auto;
   font-size: 18px;
   font-weight: 700;
   color: #fff;
+}
+.food__all {
+  border-top: 1px solid #656565;
+  padding-top: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
+.food__report {
+  font-size: 10px;
+  font-style: italic;
+  color: #383838;
+}
+.food__order {
+  padding: 7px 0px;
+  display: block;
+  border-radius: 10px;
+  background-color: #619B32;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 13px;
+}
+.food__calc {
+  margin-top: 42px;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 15px 22px;
+  position: sticky;
+  top: 100px;
+}
+.food__calc--title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.food__list li {
+  color: #5b5b5b;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px 0px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.food__list li:last-child {
+  border-bottom: 0;
+}
+.food__list li span {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+}
+.food__type {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #fff;
+}
+.food__box {
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.food__img {
+  height: 171px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+}
+.food__info {
+  padding: 15px;
+}
+.food__title {
+  font-size: 18px;
+}
+.food__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+}
+.food__count {
+  display: flex;
+  align-items: center;
+}
+.food__count button {
+  width: 26px;
+  height: 26px;
+  background-color: #157AFE;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.food__count button:hover {
+  background-color: #135CBB;
+}
+.food__value {
+  width: 37px;
+  padding: 0px 5px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
 }

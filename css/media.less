@@ -1,0 +1,140 @@
+@import url(./var.less);
+@media only screen and (max-width:1380px){
+    .header__menu li {
+        margin-right: 7px;
+    }
+    .header__menu--link span {
+        // margin-right: 7px;
+    }
+    .header__btns button {
+        margin-right: 10px;
+        width: 45px;
+        height: 45px;
+    }
+}
+@media only screen and (max-width:1173px) {
+    .container {
+        padding: 15px;
+    }
+    .header__menu--link {
+        font-size: 14px;
+        padding: 6px;
+    }
+    .header__menu li:first-child a {
+        margin-right: 0;
+        b {
+            font-size: 0;
+        }
+    }
+    .header__btns button {
+        width: 40px;
+        height: 40px;
+        span {
+            width: 15px;
+        }
+    }
+}
+@media only screen and (max-width:1024px) {
+    .food {
+        display: block;
+    }
+    .main__support--link span {
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
+    .main__support--link b {
+        font-size: 16px;
+    }
+    .header__menu--link {
+        font-size: 20px;
+    }
+    .header__menu--link b {
+        font-size: 0;
+        span {
+            margin: 0;
+        }
+    }
+    .main__about {
+        flex-direction: column;
+        &--img {
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width:768px){
+    .main__support {
+        flex-wrap: wrap;
+        &--link {
+            margin: 7.5px;
+            br {
+                display: none;
+            }
+        }
+    }
+    .main__support--link b {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+}
+@media only screen and (max-width:600px) {
+    h1 {
+        color: black;
+    }
+    .main {
+        background-size: contain;
+        background-position: center bottom;
+        background-attachment: fixed;
+    }
+    .main__support--link {
+        display: block;
+        text-align: center;
+        span {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .header {
+        &__toggle {
+            display: flex;
+        }
+        &__menu {
+            position: fixed;
+            right: -1000px;
+            top: 70px;
+            background-color: @blue;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: flex-start;
+            padding: 15px;
+            white-space: nowrap;
+            overflow: auto;
+            transition: 0.5s;
+            &.active {
+                right: 0;
+            }
+            li {
+                // width: 150px;
+                margin-bottom: 5px;
+                &:first-child {
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+            &--link b {
+                font-size: 16px;
+                span {
+                    margin-right: 15px;
+                }
+            }
+        }
+        &__btns button{
+            margin-left: 0;
+        }
+    }
+}

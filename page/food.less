@@ -1,0 +1,52 @@
+@import '../css/var.less';
+.food {
+    &__type {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    &__box {
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: #fff;
+    }
+    &__img {
+        height: 171px;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 15px;
+    }
+    &__info {
+        padding: 15px;
+    }
+    &__title {
+        font-size: 18px;
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__count {
+        display: flex;
+        align-items: center;
+        button {
+            width: 26px;
+            height: 26px;
+            background-color: @blue;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__value {
+        width: 37px;
+        padding: 0px 5px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
