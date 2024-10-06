@@ -162,6 +162,7 @@ textarea,input {
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 1;
     &__toggle {
         margin-left: auto;
         width: 40px;
@@ -491,5 +492,100 @@ h1 {
         font-size: 18px;
         font-weight: 700;
         text-align: center;
+    }
+}
+
+.links {
+    display: flex;
+    margin-bottom: 20px;
+    color: #fff;
+    a {
+        margin-right: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        &.active,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    a {
+        color: #5b5b5b;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
+        &:after {
+            content: '-';
+            margin: 0px 5px;
+        }
+    }
+}
+.blog {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    &__bimg {
+        height: 393px;
+        background-size: cover;
+        background-position: center bottom;
+        border-radius: 15px;
+      }
+    &__desc {
+        max-width: 900px;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 28px 38px;
+        margin: auto;
+        transform: translateY(-110px);
+        p {
+            margin-bottom: 15px;
+        }
+        &--title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 9px;
+            text-align: center;
+        }
+    }
+    &__img {
+        width: 256px;
+        // height: 171px;
+        border-radius: 15px;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__right {
+        width: calc(100% - 256px);
+        padding: 14px;
+    }
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 9px;
+    }
+    &__text {
+        font-size: 12px;
+        color: #2D2D2D;
+        margin-bottom: 9px;
+        overflow: hidden;
+    }
+    &__link {
+        color: @blue;
+        text-decoration: underline;
+        font-size: 14px;
+        font-weight: 500;
     }
 }
