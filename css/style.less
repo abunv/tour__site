@@ -450,11 +450,21 @@ h1 {
         background-color: #fff;
         margin-bottom: 20px;
     }
+    &__ltitle {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
     &__img {
         height: 171px;
         background-size: cover;
         background-position: center center;
         border-radius: 15px;
+        position: relative;
+        .pbox__link {
+            position: absolute;
+            right: 14px;
+            bottom: -23px;
+        }
     }
     &__info {
         padding: 15px;
@@ -587,5 +597,20 @@ h1 {
         text-decoration: underline;
         font-size: 14px;
         font-weight: 500;
+    }
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    select {
+        font-size: 18px;
+        font-weight: 500;
+        background: unset;
+        border: 0;
+        padding: 10px;
+        margin-right: 30px;
+        color: #fff;
     }
 }
