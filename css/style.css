@@ -585,3 +585,58 @@ h1 span {
   margin-right: 30px;
   color: #fff;
 }
+h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.movie__poster {
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center center;
+}
+.movie__poster button {
+  height: 80px;
+  width: 80px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.movie__poster button:hover {
+  background-color: #ff0101;
+}
+.movie__poster button:hover span {
+  filter: brightness(0) invert(1);
+}
+.movie__poster button span {
+  font-size: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff0101;
+}
+.music__head {
+  display: flex;
+  align-items: center;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.music__head--name {
+  width: 41.666%;
+  padding: 0px 10px;
+}
+.music__head--singer {
+  width: 25%;
+  padding: 0px 10px;
+}
+.music__head--play,
+.music__head--time,
+.music__head--ganre {
+  width: 8.333%;
+  padding: 0px 10px;
+}

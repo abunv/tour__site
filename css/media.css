@@ -81,6 +81,9 @@
   }
 }
 @media only screen and (max-width: 600px) {
+  h2 {
+    color: #000;
+  }
   .filter select {
     color: #000;
   }
