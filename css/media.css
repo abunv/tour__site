@@ -8,7 +8,7 @@
     height: 45px;
   }
 }
-@media only screen and (max-width: 1173px) {
+@media only screen and (max-width: 1214px) {
   .container {
     padding: 15px;
   }
@@ -81,6 +81,37 @@
   }
 }
 @media only screen and (max-width: 600px) {
+  .music__head {
+    display: none;
+  }
+  .music__body {
+    padding-right: 40px;
+    position: relative;
+    display: block;
+  }
+  .music__body--name {
+    width: 100%;
+    padding: 0px 10px;
+  }
+  .music__body--singer,
+  .music__body--ganre,
+  .music__body--time,
+  .music__body--play {
+    width: auto;
+    padding: 0px 10px;
+    display: inline-block;
+  }
+  .music__body--play {
+    position: absolute;
+    right: 25px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   h2 {
     color: #000;
   }

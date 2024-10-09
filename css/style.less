@@ -652,8 +652,11 @@ h2 {
         }
     }
 } 
+
 .music {
-   &__head {
+    &__body,
+    &__head {
+    color: #fff;
     display: flex;
     align-items: center;
     margin-left: -10px;
@@ -663,7 +666,7 @@ h2 {
         padding: 0px 10px;
     }
     &--singer {
-        width: 25%;
+        flex: 1;
         padding: 0px 10px;
     }
     &--play,
@@ -671,6 +674,36 @@ h2 {
     &--ganre {
         width: 8.333%;
         padding: 0px 10px;
+    }
+   }
+   &__head {
+    padding-bottom: 20px;
+    border-top: 1px solid #f2f2f2;
+    margin: 8px;
+   }
+   &__body {
+    color: #000;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 8px;
+    margin-bottom: 10px;
+    &--name {
+        display: flex;
+        align-items: center;
+        .music__poster {
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 5px;
+            margin-right: 8px;
+        }
+    }
+    &--play {
+        a {
+            width: 46px;
+            height: 46px;
+        }
     }
    }
 }
